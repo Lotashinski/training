@@ -24,20 +24,20 @@ import com.github.lotashinski.training.api.dto.TrainingCycleSaveDto;
 public class TrainingCycleController {
 	
 	@GetMapping
-	public ResponseEntity<List<? extends TrainingCycleItemDto>> getAll() {
+	public ResponseEntity<List<? extends TrainingCycleItemDto>> readAll() {
 		// TODO method not implemented
 		return null;
 	}
 
 	@PostMapping
 	@ResponseStatus(code = HttpStatus.CREATED)
-	public ResponseEntity<TrainingCycleDto> save(@RequestBody TrainingCycleSaveDto dto) {
+	public ResponseEntity<TrainingCycleDto> create(@RequestBody TrainingCycleSaveDto dto) {
 		// TODO method not implemented
 		return null;
 	}
 	
 	@GetMapping(path = "/{id}")
-	public ResponseEntity<TrainingCycleDto> get(@PathVariable UUID id) {
+	public ResponseEntity<TrainingCycleDto> read(@PathVariable UUID id) {
 		// TODO method not implemented
 		return null;
 	}

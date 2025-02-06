@@ -16,42 +16,38 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.github.lotashinski.training.api.dto.TrainingStageDto;
-import com.github.lotashinski.training.api.dto.TrainingStageItemDto;
-import com.github.lotashinski.training.api.dto.TrainingStageSaveDto;
+import com.github.lotashinski.training.api.dto.ExerciseVolumeDto;
+import com.github.lotashinski.training.api.dto.ExerciseVolumeSaveDto;
+
 
 @RestController
-@RequestMapping("/training_stages")
-public class TrainingStageController {
+@RequestMapping(path = "/excercise_types")
+public class ExerciseTypeController {
 	
 	@GetMapping
-	public ResponseEntity<List<? extends TrainingStageItemDto>> readAll(@RequestParam UUID trainingCycle) {
-		// TODO method not implemented
+	public ResponseEntity<List<? extends ExerciseVolumeDto>> readAll(@RequestParam UUID trainingStageId) {
 		return null;
 	}
-
+	
 	@PostMapping
-	@ResponseStatus(code = HttpStatus.CREATED)
-	public ResponseEntity<TrainingStageDto> create(@RequestParam UUID trainingCycle, @RequestBody TrainingStageSaveDto dto) {
-		// TODO method not implemented
+	@ResponseStatus(value = HttpStatus.CREATED)
+	public ResponseEntity<ExerciseVolumeDto> create(@RequestParam UUID trainingStageId, @RequestBody ExerciseVolumeSaveDto dto) {
 		return null;
 	}
 	
 	@GetMapping(path = "/{id}")
-	public ResponseEntity<TrainingStageDto> read(@PathVariable UUID id) {
-		// TODO method not implemented
+	public ResponseEntity<ExerciseVolumeDto> get(@PathVariable UUID id) {
 		return null;
 	}
 	
 	@PutMapping(path = "/{id}")
-	public ResponseEntity<TrainingStageDto> update(@PathVariable UUID id, @RequestBody TrainingStageSaveDto dto) {
-		// TODO method not implemented
+	public ResponseEntity<ExerciseVolumeDto> update(@PathVariable UUID id, @RequestBody ExerciseVolumeSaveDto dto) {
 		return null;
 	}
 	
 	@DeleteMapping(path = "/{id}")
 	public void delete(@PathVariable UUID id) {
-		// TODO method not implemented
+		
 	}
 	
 }

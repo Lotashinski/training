@@ -9,8 +9,6 @@ public class TrainingObjectiveDto {
 
 	private UUID id;
 	
-	private UUID trainingCycle;
-	
 	private String description;
 	
 }

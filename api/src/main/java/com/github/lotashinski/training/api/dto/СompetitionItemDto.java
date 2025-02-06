@@ -1,6 +1,6 @@
 package com.github.lotashinski.training.api.dto;
 
-import java.time.LocalDate;
+import java.time.Period;
 import java.util.UUID;
 
 import lombok.Data;
@@ -12,8 +12,6 @@ public class СompetitionItemDto {
 	
 	private String title;
 	
-	private LocalDate startAt;
-	
-	private LocalDate endAt;
+	private Period period;
 	
 }

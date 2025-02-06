@@ -1,22 +1,18 @@
 package com.github.lotashinski.training.api.dto;
 
-import java.time.LocalDate;
-import java.util.UUID;
+import com.github.lotashinski.training.api.entity.Period;
 
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
 public class TrainingStageSaveDto {
-
-	@NotNull
-    private UUID trainingCycle;
+	
+	@Valid
+	private Period period;
 	
 	@NotBlank
-	private LocalDate startAt;
-	
-	@NotBlank
-	private LocalDate endAt;
+	private String title;
 	
 }

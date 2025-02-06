@@ -5,15 +5,15 @@ import java.util.UUID;
 import lombok.Data;
 
 @Data
-public class TrainingVolumeDto {
+public class ExerciseVolumeItemDto {
 
 	private UUID id;
 	
-	private UUID trainingStage;
+	private String title;
 	
-	private Integer sessions;
+	private int trainingsCount;
 	
-	private Long volume;
+	private long totalVolume;
 	
 	private String units;
 	

@@ -5,11 +5,9 @@ import java.util.UUID;
 import lombok.Data;
 
 @Data
-public class ExerciseTypeDto {
+public class ExerciseVolumeDto {
 
 	private UUID id;
-	
-	private UUID trainingStage;
 	
 	private String title;
 	

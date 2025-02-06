@@ -1,7 +1,8 @@
 package com.github.lotashinski.training.api.dto;
 
-import java.time.LocalDate;
 import java.util.UUID;
+
+import com.github.lotashinski.training.api.entity.Period;
 
 import lombok.Data;
 
@@ -10,10 +11,8 @@ public class TrainingStageItemDto {
 	
 	private UUID id;
 	
-	private UUID trainingCycle;
+	private Period period;
 	
-	private LocalDate startAt;
-	
-	private LocalDate endAt;
+	private String title;
 	
 }
