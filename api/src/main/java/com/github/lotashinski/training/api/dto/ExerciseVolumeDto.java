@@ -11,4 +11,10 @@ public class ExerciseVolumeDto {
 	
 	private String title;
 	
+	private int trainingsCount;
+	
+	private long totalVolume;
+	
+	private String units;
+	
 }
