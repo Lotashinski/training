@@ -17,8 +17,8 @@ public class TrainingStageDto {
 	
 	private String title;
 	
-	private List<? extends ExerciseVolumeDto> exerciseVolumes = new ArrayList<>();
+	private List<ExerciseVolumeDto> exerciseVolumes = new ArrayList<>();
 	
-	private List<? extends TrainingObjectiveDto> objectives = new ArrayList<>();
+	private List<TrainingObjectiveDto> objectives = new ArrayList<>();
 	
 }

@@ -19,8 +19,8 @@ public class TrainingCycleDto {
 	
 	private String description;
 	
-	private List<? extends TrainingStageDto> stages = new ArrayList<>();
+	private List<TrainingStageDto> stages = new ArrayList<>();
 	                       
-	private List<? extends СompetitionDto> competitions = new ArrayList<>();
+	private List<СompetitionDto> competitions = new ArrayList<>();
 	
 }
