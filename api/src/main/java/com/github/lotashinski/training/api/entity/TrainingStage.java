@@ -5,6 +5,7 @@ import java.util.UUID;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
+import jakarta.persistence.ForeignKey;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -28,7 +29,9 @@ public class TrainingStage {
 	
 	
 	@ManyToOne
-	@JoinColumn(name = "training_cucle_id", nullable = false)
+	@JoinColumn(name = "training_cucle_id", 
+				nullable = false,
+				foreignKey = @ForeignKey(name = "FK_TRAINING_STAGE_TO_TRAINING_CYCLE"))
 	private TrainingCycle trainingCucle;
 	
 	
