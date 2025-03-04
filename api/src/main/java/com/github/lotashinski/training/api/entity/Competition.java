@@ -29,7 +29,7 @@ public class Competition {
 	
 	@ManyToOne
 	@JoinColumn(name = "training_cucle_id", nullable = false)
-	private TrainingCucle trainingCucle;
+	private TrainingCycle trainingCycle;
 	
 	
 	@Embedded

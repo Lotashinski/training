@@ -29,7 +29,7 @@ public class TrainingStage {
 	
 	@ManyToOne
 	@JoinColumn(name = "training_cucle_id", nullable = false)
-	private TrainingCucle trainingCucle;
+	private TrainingCycle trainingCucle;
 	
 	
 	@Embedded

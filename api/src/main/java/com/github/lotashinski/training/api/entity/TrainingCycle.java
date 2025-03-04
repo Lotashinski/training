@@ -6,6 +6,7 @@ import java.util.UUID;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
@@ -21,7 +22,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class TrainingCucle {
+public class TrainingCycle {
 
 	@Id
 	@EqualsAndHashCode.Include
@@ -35,8 +36,10 @@ public class TrainingCucle {
 	@Column(name = "description")
 	private String description;
 	
+	@Embedded
+	private Period period;
 	
-	@OneToMany(mappedBy = "trainingCucle", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "trainingCycle", cascade = CascadeType.ALL)
 	@OrderBy("period.start ASC")
 	@Setter(value = AccessLevel.PACKAGE)
 	private List<Competition> competitions = new ArrayList<>();

@@ -11,8 +11,8 @@ spring:
             hibernate:
               format_sql: true
         hibernate:
-            ddl-auto: create-drop
-        show-sql: true
+            ddl-auto: update
+        show-sql: false
     liquibase:
         enabled: false
     mvc:

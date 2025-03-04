@@ -1,9 +1,10 @@
 package com.github.lotashinski.training.api.dto;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+
+import com.github.lotashinski.training.api.entity.Period;
 
 import lombok.Data;
 
@@ -12,9 +13,11 @@ public class TrainingCycleDto {
 	
 	private UUID id;
 	
-	private LocalDate startAt;
+	private Period period;
 	
-	private LocalDate endAt;
+	private String title;
+	
+	private String description;
 	
 	private List<? extends TrainingStageDto> stages = new ArrayList<>();
 	                       

@@ -1,7 +1,8 @@
 package com.github.lotashinski.training.api.dto;
 
-import java.time.Period;
 import java.util.UUID;
+
+import com.github.lotashinski.training.api.entity.Period;
 
 import lombok.Data;
 
