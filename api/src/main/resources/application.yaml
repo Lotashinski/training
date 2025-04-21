@@ -3,7 +3,7 @@ spring:
         name: wallet
     datasource:
         username: ${POSTGRES_USER:api}
-        password: ${POSTGRES_PASSWORD:secret}
+        password: ${POSTGRES_PASSWORD:?error}
         url: jdbc:postgresql://${POSTGRES_HOST:127.0.0.1}:${POSTGRES_PORT:5432}/${POSTGRES_DB_NAME:api}
         driver-class-name: org.postgresql.Driver
     jpa:
