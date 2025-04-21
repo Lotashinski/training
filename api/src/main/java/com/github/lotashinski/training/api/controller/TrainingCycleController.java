@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.UUID;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -39,7 +38,7 @@ public class TrainingCycleController {
 	@PostMapping
 	@ResponseStatus(code = HttpStatus.CREATED)
 	public ResponseEntity<TrainingCycleDto> create(@RequestBody TrainingCycleSaveDto dto) {
-		return new ResponseEntity<TrainingCycleDto>(trainingCycleService.save(dto), HttpStatus.CREATED);
+		return new ResponseEntity<>(trainingCycleService.save(dto), HttpStatus.CREATED);
 	}
 	
 	@GetMapping(path = "/{id}")

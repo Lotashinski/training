@@ -13,6 +13,8 @@ public class СompetitionDto {
 	
 	private String title;
 	
+	private String description;
+	
 	private Period period;
 	
 }

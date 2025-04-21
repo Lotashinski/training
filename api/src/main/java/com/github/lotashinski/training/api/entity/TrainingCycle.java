@@ -6,7 +6,6 @@ import java.util.UUID;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
-import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
@@ -35,16 +34,17 @@ public class TrainingCycle {
 	
 	@Column(name = "description")
 	private String description;
-	
-	@Embedded
+
+	@Column(name = "period")
 	private Period period;
 	
-	@OneToMany(mappedBy = "trainingCycle", cascade = CascadeType.ALL)
-	@OrderBy("period.start ASC")
+	
+	@OneToMany(mappedBy = "trainingCycle")
+	@OrderBy("period.start ASC") // вот это ДЭБИЛ
 	@Setter(value = AccessLevel.PACKAGE)
 	private List<Competition> competitions = new ArrayList<>();
 	
-	@OneToMany(mappedBy = "trainingCucle", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "trainingCucle")
 	@OrderBy("period.start ASC")
 	@Setter(value = AccessLevel.PACKAGE)
 	private List<TrainingStage> trainingStages = new ArrayList<>();

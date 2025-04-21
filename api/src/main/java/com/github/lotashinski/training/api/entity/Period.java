@@ -1,29 +1,30 @@
 package com.github.lotashinski.training.api.entity;
 
-import java.time.LocalDateTime;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Embeddable;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
-
-@Embeddable
-@Getter
-@Setter
-@ToString
-@NoArgsConstructor
-@AllArgsConstructor
-@EqualsAndHashCode
 public class Period {
 
-	@Column(name = "start_at")
-	private LocalDateTime start;
+	private int days;
 	
-	@Column(name = "end_at")
-	private LocalDateTime end;
+	
+	public Period(int days) {
+		this.days = days;
+	}
+	
+	
+	public int getAllDays() {
+		return days;
+	}
+	
+	public int getDays() {
+		return days % 30;
+	}
+	
+	public int getMonths() {
+		return (days % 365) / 30;
+	}
+	
+	public int getYears() {
+		return days % 365;
+	}
 	
 }

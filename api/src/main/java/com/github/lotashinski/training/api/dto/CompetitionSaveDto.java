@@ -12,6 +12,8 @@ public class CompetitionSaveDto {
 	@NotBlank
 	private String title;
 	
+	private String description;
+	
 	@Valid
 	private Period period;
 	

@@ -1,14 +1,17 @@
 package com.github.lotashinski.training.api.entity;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
-import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ForeignKey;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AccessLevel;
 import lombok.EqualsAndHashCode;
@@ -35,10 +38,19 @@ public class TrainingStage {
 	private TrainingCycle trainingCucle;
 	
 	
-	@Embedded
+	@Column(name = "period")
 	private Period period;
 	
 	@Column(name = "title", nullable = false)
 	private String title;
+	
+	@Column(name = "description", nullable = false)
+	private String description;
+	
+	@OneToMany(mappedBy = "trainingStage", orphanRemoval = true, cascade = CascadeType.ALL)
+	private List<TrainingObjectives> objectives = new ArrayList<>();
+	
+	@OneToMany(mappedBy = "trainingStage", orphanRemoval = true, cascade = CascadeType.ALL)
+	private List<ExerciseVolume> volumes = new ArrayList<>();
 	
 }

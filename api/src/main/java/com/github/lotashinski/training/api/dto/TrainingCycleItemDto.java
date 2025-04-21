@@ -1,6 +1,5 @@
 package com.github.lotashinski.training.api.dto;
 
-import java.time.LocalDate;
 import java.util.UUID;
 
 import com.github.lotashinski.training.api.entity.Period;

@@ -3,7 +3,6 @@ package com.github.lotashinski.training.api.entity;
 import java.util.UUID;
 
 import jakarta.persistence.Column;
-import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ForeignKey;
 import jakarta.persistence.Id;
@@ -27,16 +26,21 @@ public class Competition {
 	@Setter(value = AccessLevel.PACKAGE)
 	private UUID id = UUID.randomUUID();
 
+	
 	@ManyToOne
 	@JoinColumn(name = "training_cucle_id", 
 				nullable = false,
 				foreignKey = @ForeignKey(name = "FK_COMPETITION_TO_TRAINING_CYCLE"))
 	private TrainingCycle trainingCycle;
 
-	@Embedded
+	
+	@Column(name = "period")
 	private Period period;
 
 	@Column(name = "title", nullable = false)
 	private String title;
 
+	@Column(name = "description")
+	private String description;
+	
 }

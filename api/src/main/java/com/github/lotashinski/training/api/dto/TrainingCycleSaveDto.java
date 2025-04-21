@@ -1,7 +1,5 @@
 package com.github.lotashinski.training.api.dto;
 
-import java.time.LocalDate;
-
 import com.github.lotashinski.training.api.entity.Period;
 
 import lombok.Data;

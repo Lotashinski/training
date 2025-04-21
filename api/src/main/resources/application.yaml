@@ -1,11 +1,10 @@
 spring:
     application:
-        name: wallet
+        name: training
     datasource:
         username: ${POSTGRES_USER:api}
         password: ${POSTGRES_PASSWORD:?error}
         url: jdbc:postgresql://${POSTGRES_HOST:127.0.0.1}:${POSTGRES_PORT:5432}/${POSTGRES_DB_NAME:api}
-        driver-class-name: org.postgresql.Driver
     jpa:
         properties:
             hibernate:
@@ -37,7 +36,7 @@ springdoc:
    
 
 server:
-    port: ${APP_PORT:8000}
+    port: ${APP_PORT:8888}
     tomcat:
         relaxed-query-chars: ["{",  "}", "[", "]"]
       

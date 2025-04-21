@@ -37,6 +37,9 @@ public class ExerciseVolume {
 	@Column(name = "title", nullable = false)
 	private String title;
 	
+	@Column(name = "description")
+	private String description;
+	
 	@Column(name = "trainings_count", nullable = false)
 	private Integer trainingsCount;
 	

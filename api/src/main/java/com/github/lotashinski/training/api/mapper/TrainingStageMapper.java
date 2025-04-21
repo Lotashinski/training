@@ -1,6 +1,7 @@
 package com.github.lotashinski.training.api.mapper;
 
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;
 import org.mapstruct.MappingTarget;
 
@@ -15,8 +16,12 @@ public interface TrainingStageMapper {
 
 	TrainingStageItemDto toDto(TrainingStage source, @MappingTarget TrainingStageItemDto target);
 	
+	@Mapping(target = "exerciseVolumes", ignore = true)
 	TrainingStageDto toDto(TrainingStage source, @MappingTarget TrainingStageDto target);
 	
+	@Mapping(target = "volumes", ignore = true)
+	@Mapping(target = "trainingCucle", ignore = true)
+	@Mapping(target = "objectives", ignore = true)
 	TrainingStage toEntity(TrainingStageSaveDto source, @MappingTarget TrainingStage target);
 	
 }

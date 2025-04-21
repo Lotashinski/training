@@ -15,4 +15,6 @@ public class TrainingStageSaveDto {
 	@NotBlank
 	private String title;
 	
+	private String description;
+	
 }

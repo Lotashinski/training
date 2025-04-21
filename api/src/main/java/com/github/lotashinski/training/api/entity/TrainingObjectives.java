@@ -31,8 +31,10 @@ public class TrainingObjectives {
 				foreignKey = @ForeignKey(name = "FK_TRAINING_OBJECTIVES_TO_TRAINING_STAGE"))
 	private TrainingStage trainingStage;
 	
+	@Column(name = "title", nullable = false)
+	private String title;
 	
-	@Column(name = "description", nullable = false)
+	@Column(name = "description")
 	private String description;
 	
 }

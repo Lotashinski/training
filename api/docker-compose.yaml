@@ -4,7 +4,7 @@ services:
       networks:
         - internal
       environment:
-        POSTGRES_DB: ${DB_NAME:-app}
+        POSTGRES_DB: ${DB_NAME:-api}
         POSTGRES_USER: ${DB_USER:?error}
         POSTGRES_PASSWORD: ${DB_PASSWORD:?error}
       ports:
@@ -26,8 +26,8 @@ services:
       depends_on:
       - postgres
       ports:
-      - "8000:8000"   
-      
+      - "8000:8000"
+
 networks:
   internal:
     driver: bridge
